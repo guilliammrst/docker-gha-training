@@ -10,6 +10,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 1. Fork the repo: https://github.com/emmanuelgautier/docker-gha-training
 We can't put it private because the repo is public.
+![alt text](fork.png)
 
 ## 2. Create the dockerfile
 Using `python:3.12-slim` the lightweight base image. The `--no-cache-dir` option in `pip install` ensures that no unnecessary files are cached, keeping the image size minimal. Setting `PYTHONDONTWRITEBYTECODE=1` and `PYTHONUNBUFFERED=1` improves performance and ensures predictable behavior.
@@ -74,3 +75,11 @@ This workflow builds and pushes the Docker image to the GitHub Container Registr
 
 ## 2. Build and Test Workflow
 This workflow builds and tests the project on every push to any branch. The workflow file is located at `.github/workflows/build-and-test.yml`.
+
+# Testing and Submission (3 points)
+
+## 1. Experience Completing the Exam
+Completing this exam was a rewarding experience that allowed me to apply my knowledge of Docker, Docker Compose, and GitHub Actions. One of the main challenges I faced was managing secrets securely using Docker Swarm. Initially, I encountered errors when trying to use external secrets, as they were not properly created or recognized. To overcome this, I ensured that Docker Swarm was initialized and used the correct commands to create secrets. Additionally, I verified the secrets using `docker secret ls` and updated the `docker-compose.yml` file to reference them as external secrets. This process taught me the importance of securely managing sensitive data in a production environment.
+
+## 2. Next Steps for Production Readiness
+To make this stack and the Docker images production-ready, the next step would be implement logging and monitoring. Add tools like Prometheus and Grafana to monitor the health and performance of the services. This will help ensure the system remains reliable and issues can be identified and resolved quickly.
