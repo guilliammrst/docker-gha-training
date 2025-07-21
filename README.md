@@ -66,3 +66,11 @@ Using the following command :
 docker stack deploy -c docker-compose.yml my_stack
 ```
 We can't use docker-compose up with Swarm secrets.
+
+# Continuous Integration / Continuous Deployment with Github Actions (4 points)
+
+## 1. Build and Push Docker Image Workflow
+This workflow builds and pushes the Docker image to the GitHub Container Registry whenever there is a push to the `main` branch. The workflow file is located at `.github/workflows/build-and-push.yml`.
+
+## 2. Build and Test Workflow
+This workflow builds and tests the project on every push to any branch. The workflow file is located at `.github/workflows/build-and-test.yml`.
